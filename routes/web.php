@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Spatie\LaravelPdf\Facades\Pdf;
+use Illuminate\Support\Facades\Log;
 
 Route::get('/', function () {
     return view('welcome');
@@ -10,10 +11,11 @@ Route::get('/', function () {
 Route::get('/test-pdf', function () {
     $htmlContent = "<h1>Hello World!</h1><p>This is a test PDF generated from HTML.</p>";
     $pdfPath = '/home/www/appstaging.meinrad.ch/public/hello_world.pdf'; // Adjust the path as needed
+
     Pdf::html($htmlContent)
         ->withBrowsershot(function ($browsershot) {
             $browsershot
-                ->setIncludePath('$PATH:'.env('BROWSERSHOT_INCLUDE_PATH'));
+                ->setIncludePath('$PATH:'.config('browsershot.browsershot_include_path'));
                 /* ->noSandbox() // This method is often available in Browsershot to simplify the process.
                 ->addChromiumArguments([
                     '--disable-setuid-sandbox', // Disables the setuid sandbox for the renderer process.
@@ -22,5 +24,5 @@ Route::get('/test-pdf', function () {
                 ]);  */
         })
         ->save('test-pdf.pdf');
-    return view('welcome');
+    //return view('welcome');
 });
