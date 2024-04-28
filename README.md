@@ -29,15 +29,15 @@ sudo apt-get install libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 lib
    ```
 
 2. **Install nvm (Node Version Manager) from within your laravel project root as the vhost user**
-```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-```
-```
-source ~/.bashrc
-```
-```
-nvm install node
-```
+    ```
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    ```
+    ```
+    source ~/.bashrc
+    ```
+    ```
+    nvm install node
+    ```
 
 3. **Install PHP dependencies:**
    ```
@@ -74,7 +74,9 @@ nvm install node
      dirname $(nvm which current)
      ```
    - Set the BROWSERSHOT_INCLUDE_PATH in your .env with the path found above:
+     ```
      BROWSERSHOT_INCLUDE_PATH=/path/to/your/node/bin
+     ```
 
 10. **Make sure your application is running from an OpenLiteSpeed Virtual Host, and update the `APP_URL` in .env**
 
