@@ -10,7 +10,7 @@
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
-- PHP >= 7.4
+- PHP >= 8.2
 - Composer - Dependency Manager for PHP
 - Node.js and npm (Node package manager)
 - Required libraries for running Puppeteer:
