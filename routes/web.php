@@ -29,7 +29,6 @@ Route::get('/test-pdf', function () {
         ->save($pdfPath);
         
         return 'PDF generated and saved to ' . $pdfPath;
-    //return view('welcome');
 });
 
 Route::get('/test-pptr', function () {
