@@ -1,19 +1,41 @@
-/.phpunit.cache
-/node_modules
-/public/build
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
-.env
-.env.backup
-.env.production
-.phpunit.result.cache
+# Local development configuration files
 Homestead.json
 Homestead.yaml
 auth.json
-npm-debug.log
-yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# Environment configuration files
+.env
+.env.backup
+.env.production
+
+# Composer dependencies
+/vendor
+
+# Node dependencies
+/node_modules
+
+# Build folders
+/public/build
+/public/hot
+/public/storage
+
+# Storage and keys
+/storage/*.key
+
+# Caches
+/.phpunit.cache
+.phpunit.result.cache
+
+# Log files
+npm-debug.log
+yarn-error.log
+
+# Operating system generated files
+.DS_Store
+Thumbs.db
+
+# Gregs development setup
+deploy.bash
