@@ -32,7 +32,7 @@ Route::get('/test-pdf', function () {
     //return view('welcome');
 });
 
-Route::get('/test-node', function () {
+Route::get('/test-pptr', function () {
     // Path to your Node.js script
     $scriptPath = base_path('test-pptr.cjs');
 
