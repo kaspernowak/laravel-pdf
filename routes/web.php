@@ -17,7 +17,7 @@ Route::get('/test-pdf', function () {
     Pdf::html($htmlContent)
         ->withBrowsershot(function ($browsershot) {
             $browsershot
-                ->setIncludePath('$PATH:'.config('browsershot.browsershot_include_path'))
+                ->setIncludePath('$PATH:'.config('browsershot.include_path'))
                 /* ->noSandbox() // This method is often available in Browsershot to simplify the process.
                 ->addChromiumArguments([
                     '--disable-setuid-sandbox',
@@ -36,7 +36,7 @@ Route::get('/test-pptr', function () {
     $scriptPath = base_path('test-pptr.cjs');
 
     // Get the Node.js PATH from .env file
-    $nodePath = config('browsershot.browsershot_include_path');
+    $nodePath = config('browsershot.include_path');
     $currentPath = env('PATH');
 
     // Set the full path to include Node.js executable
